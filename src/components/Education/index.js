@@ -1,10 +1,13 @@
-import React from 'react'
-import "./styles.scss"
+import React from "react";
+import "./styles.scss";
 
 function Education() {
   return (
-    <div className='Education section'>Education</div>
-  )
+    <div className="Education section">
+      <p className="section-title">Education</p>
+      <div className="topic">Education</div>
+    </div>
+  );
 }
 
-export default Education
+export default Education;

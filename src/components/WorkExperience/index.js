@@ -5,7 +5,7 @@ function WorkExperience() {
   return (
     <div className="WorkExperience section">
       <p className="section-title">Work Experience</p>
-      WorkExperience
+      <div className="topic">WorkExperience</div>
     </div>
   );
 }
