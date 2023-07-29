@@ -1,9 +1,11 @@
 import React from 'react'
+import "./styles.scss"
 
-function Header() {
+
+function Languages() {
   return (
-    <div>Header</div>
+    <div>Languages</div>
   )
 }
 
-export default Header
+export default Languages

@@ -1,9 +1,11 @@
 import React from 'react'
+import "./styles.scss"
 
-function Header() {
+
+function Skills() {
   return (
-    <div>Header</div>
+    <div>Skills</div>
   )
 }
 
-export default Header
+export default Skills

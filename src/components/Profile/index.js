@@ -1,9 +1,11 @@
 import React from 'react'
+import "./styles.scss"
 
-function Header() {
+
+function Profile() {
   return (
-    <div>Header</div>
+    <div>Profile</div>
   )
 }
 
-export default Header
+export default Profile

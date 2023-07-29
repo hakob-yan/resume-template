@@ -1,9 +1,12 @@
 import React from 'react'
+import "./styles.scss"
 
-function Header() {
+
+
+function WorkExperience() {
   return (
-    <div>Header</div>
+    <div>WorkExperience</div>
   )
 }
 
-export default Header
+export default WorkExperience
