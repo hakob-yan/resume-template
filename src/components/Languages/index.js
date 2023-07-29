@@ -4,7 +4,7 @@ import "./styles.scss"
 
 function Languages() {
   return (
-    <div className='Languages'>Languages</div>
+    <div className='Languages section right-side'>Languages</div>
   )
 }
 

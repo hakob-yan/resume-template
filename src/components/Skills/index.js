@@ -4,7 +4,7 @@ import "./styles.scss"
 
 function Skills() {
   return (
-    <div className='Skills'> Skills</div>
+    <div className='Skills section right-side'> Skills</div>
   )
 }
 

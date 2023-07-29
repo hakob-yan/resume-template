@@ -4,7 +4,7 @@ import "./styles.scss"
 
 function Profile() {
   return (
-    <div className='Profile'>Profile</div>
+    <div className='Profile section right-side'>Profile</div>
   )
 }
 

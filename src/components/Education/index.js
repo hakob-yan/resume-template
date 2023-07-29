@@ -3,7 +3,7 @@ import "./styles.scss"
 
 function Education() {
   return (
-    <div className='Education'>Education</div>
+    <div className='Education section'>Education</div>
   )
 }
 
