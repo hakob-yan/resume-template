@@ -1,3 +1,10 @@
 .WorkExperience {
   grid-column: 1 /8;
+  .job-left-side {
+    grid-column: 1 /2;
+    
+  }
+  .job-right-side {
+    grid-column: 2 /3;
+  }
 }

@@ -5,7 +5,7 @@ function Education() {
   return (
     <div className="Education section">
       <p className="section-title">Education</p>
-      <div className="topic">Education</div>
+      <div className="topic section-seperated ">Education</div>
     </div>
   );
 }

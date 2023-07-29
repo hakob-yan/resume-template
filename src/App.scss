@@ -1,13 +1,17 @@
-.app{
+.app {
   display: grid;
-  grid-template-columns: repeat(13 ,1fr);
+  grid-template-columns: repeat(13, 1fr);
   width: 80%;
-  margin:100px auto 0 auto;
+  margin: 100px auto 0 auto;
   background: #fff;
   box-shadow: -10px 20px 60px 5px;
   border-radius: 2px;
   overflow: hidden;
-  .topic{
-    margin :1.5rem 0
+  .topic {
+    margin: 1.5rem 0;
+  }
+  .section-seperated {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
