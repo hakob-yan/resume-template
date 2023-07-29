@@ -4,7 +4,7 @@ import "./styles.scss"
 
 function Header() {
   return (
-    <div>Header</div>
+    <div className='Header'>Header</div>
   )
 }
 

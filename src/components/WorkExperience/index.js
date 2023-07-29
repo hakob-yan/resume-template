@@ -5,7 +5,7 @@ import "./styles.scss"
 
 function WorkExperience() {
   return (
-    <div>WorkExperience</div>
+    <div className='WorkExperience'>WorkExperience</div>
   )
 }
 
