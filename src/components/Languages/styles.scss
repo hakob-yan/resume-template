@@ -1,3 +1,28 @@
-.Languages {
+@import "../../variables";
 
+.Languages {
+  color: $primary-color;
+  .language-secion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .lang-item {
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      .lang-level {
+        display: flex;
+        gap: 1rem;
+        .level {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 8px;
+          background-color: $secondary-color;
+          &.active {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
 }
