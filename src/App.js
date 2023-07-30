@@ -8,9 +8,8 @@ import WorkExperience from "./components/WorkExperience";
 import "./App.scss";
 
 function App() {
-  useEffect(() => {
-    document.title = "My Resume";
-  }, []);
+
+  
   return (
     <div className="app">
       <Header />
