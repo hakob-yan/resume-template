@@ -3,7 +3,7 @@ import "./styles.scss";
 
 function Profile() {
   return (
-    <div className="Profile section right-side">
+    <div className="Profile section">
       <p className="section-title">Profile</p>
       <div className="topic">
         <p className="summary">

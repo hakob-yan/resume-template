@@ -3,7 +3,7 @@ import "./styles.scss";
 
 function Languages() {
   return (
-    <div className="Languages section right-side">
+    <div className="Languages section">
       <p className="section-title">Languages</p>
       <div className="topic">Languages</div>
 

@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(#4568dc, #b06ab3);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 code {
@@ -20,9 +20,6 @@ code {
 }
 
 :root {
-  font-size: 16px;
+  font-size:16px;
 }
 
-@media print {
- 
-}

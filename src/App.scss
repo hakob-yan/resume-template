@@ -1,7 +1,8 @@
 .app {
   display: grid;
   grid-template-columns: repeat(13, 1fr);
-  width: 1200px;
+  grid-auto-rows: min-content;
+  max-width: 1200px;
   margin: 100px auto 0 auto;
   background: #fff;
   box-shadow: -10px 20px 60px 5px;
@@ -24,15 +25,13 @@
     font-weight: 600;
     border-bottom: 2px solid #000;
   }
-  .right-side {
-    background-color: #2b2b2814;
-  }
+
   .topic__left-side {
-    grid-column: 1 /2;
+    grid-column: span 1;
     justify-self: end;
   }
   .topic__right-side {
-    grid-column: 2 /4;
+    grid-column: span 2;
     justify-items: end;
   }
   .topic-title {
@@ -44,5 +43,14 @@
   .topic-desc {
     font-size: 1rem;
     color: gray;
+  }
+  .left-layout{
+    grid-column: span 7;
+  }
+  .right-layout{
+    grid-column: span 6;
+    background-color: #2b2b2814;
+
+
   }
 }

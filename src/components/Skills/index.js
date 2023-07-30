@@ -3,7 +3,7 @@ import "./styles.scss";
 
 function Skills() {
   return (
-    <div className="Skills section right-side">
+    <div className="Skills section">
       <p className="section-title">Skills</p>
       <div className="topic">Skills</div>
     </div>
