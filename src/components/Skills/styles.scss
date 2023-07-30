@@ -1,3 +1,10 @@
 .Skills {
-
+  .skills_section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.7rem;
+    div{
+      width: max-content;
+    }
+    }
 }
