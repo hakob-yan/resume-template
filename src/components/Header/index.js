@@ -10,11 +10,11 @@ import Location from "../../assets/icons/location.svg";
 import "./styles.scss";
 
 const contactsArr = [
-  { src: LinkedIn, value: "www.linkedin.com/in/hakob-yan" },
-  { src: Gmail, value: "devhakob@gmail.com" },
-  { src: GitHub, value: "www.github.com/hakob-yan" },
   { src: Phone, value: "+374-93-102-122" },
   { src: Location, value: "Yerevan, Armenia" },
+  { src: Gmail, value: "devhakob@gmail.com" },
+  { src: LinkedIn, value: "linkedin.com/in/hakob-yan" },
+  { src: GitHub, value: "github.com/hakob-yan" },
 
 
 
