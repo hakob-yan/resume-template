@@ -11,6 +11,9 @@
 
   .persoal-info {
     grid-column: 1 /8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     text-align: center;
     .full-name {
       text-transform: uppercase;
@@ -18,7 +21,8 @@
     }
     .profession {
       text-transform: uppercase;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      color: $subtitle-color;
       // line-height: 5rem;
     }
   }

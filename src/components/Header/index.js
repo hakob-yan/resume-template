@@ -10,11 +10,11 @@ import Location from "../../assets/icons/location.svg";
 import "./styles.scss";
 
 const contactsArr = [
-  { src: Phone, value: "+374-93-102-122" },
-  { src: Location, value: "Yerevan, Armenia" },
-  { src: Gmail, value: "devhakob@gmail.com" },
-  { src: LinkedIn, value: "linkedin.com/in/hakob-yan" },
-  { src: GitHub, value: "github.com/hakob-yan" },
+  { src: Phone, value: "+374-93-102-122",link:"tel:+374-93-102-122" },
+  { src: Location, value: "Yerevan, Armenia",link:"https://goo.gl/maps/F5TodZ4nsdAPjRNZ9"  },
+  { src: Gmail, value: "devhakob@gmail.com",link:"mailto:devhakob@gmail.com" },
+  { src: LinkedIn, value: "linkedin.com/in/hakob-yan",link:"https://www.linkedin.com/in/hakob-yan" },
+  { src: GitHub, value: "github.com/hakob-yan",link:"https://github.com/hakob-yan" },
 
 
 
@@ -30,7 +30,7 @@ const Contacts = () => {
             <img src={el.src} alt="logo" className="logo" />
             <a
               className="social-media-name"
-              href={`https://` + el.value}
+              href={el.link}
               target="_blank"
             >
               {el.value}
