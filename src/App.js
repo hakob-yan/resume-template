@@ -11,7 +11,7 @@ function App() {
 
   
   return (
-    <div className="app">
+    <div id="resume-wrapper" className="app">
       <Header />
       <div className="left-layout">
         <WorkExperience />
