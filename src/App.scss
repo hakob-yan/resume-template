@@ -2,13 +2,14 @@
 .app {
   @media print {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    border-radius: 0;
     margin: 0;
   }
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  grid-auto-rows: min-content;
   max-width: 1200px;
+  grid-template-columns: repeat(13, 1fr);
+  grid-auto-rows: auto 1fr;
   margin: 100px auto 0 auto;
   background: $pure-color;
   box-shadow: -10px 20px 60px 5px;
@@ -17,7 +18,6 @@
   .topic {
     margin: 1.5rem 0;
     color: $secondary-color;
-
   }
   .section-seperated {
     display: grid;
@@ -32,7 +32,7 @@
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
-    border-bottom: 2px solid  $primary-color;
+    border-bottom: 2px solid $primary-color;
   }
 
   .topic__left-side {
@@ -53,13 +53,17 @@
     font-size: 1rem;
     color: $secondary-color;
   }
-  .left-layout{
+  .left-layout {
     grid-column: span 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
-  .right-layout{
+  .right-layout {
     grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     background-color: $layout-color;
-
-
   }
 }
