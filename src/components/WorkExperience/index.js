@@ -2,10 +2,10 @@ import React from "react";
 import "./styles.scss";
 const jobsArr = [
   {
-    startDate: "Mar 2016",
-    endDate: "Mar 2018",
+    startDate: "Aug 2022",
+    endDate: "Present",
     position: "Front End Developer",
-    companyName: "Cretrix",
+    companyName: "Cretrix LLC",
     location: "Yerevan,Armenia",
     aboutCompany:
       "We have been doing web development, promotion and web support since 2009. During these years we have created dozen of 5 years of work experience.",
@@ -43,7 +43,7 @@ function WorkExperience() {
             <>
               <div className="topic__left-side">
                 <p className="topic-title">{job.startDate +'-' +job.endDate}</p>
-                <p className="topic-desc">{job.position}</p>
+                <p className="topic-desc topic-title">{job.position}</p>
               </div>
               <div className="topic__right-side">
                 <p className="topic-title">{job.companyName + job.location}</p>

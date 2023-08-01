@@ -28,7 +28,7 @@ function Education() {
                 <p className="topic-title">
                   {job.startDate + "-" + job.endDate}
                 </p>
-                <p className="topic-desc">{job.specialization}</p>
+                <p className="topic-desc topic-title">{job.specialization}</p>
               </div>
               <div className="topic__right-side">
                 <p className="topic-title">
