@@ -1,5 +1,7 @@
 import React from "react";
 import "./styles.scss";
+import ListItem from "../ListItem";
+
 const jobsArr = [
   {
     startDate: "Aug 2022",
@@ -14,6 +16,21 @@ const jobsArr = [
         "Added Intercom into web applications .Created new Intercom events for stats    and higher admin control also for user convenience for familiarizing features of    applications.",
         "Built more than 20 type of charts by D3.js and optimized performance.",
       ],
+    usedTechnologies: "Redux",
+  },
+  {
+    startDate: "Mar 2016",
+    endDate: "Mar 2018",
+    position: "Front End Developer",
+    companyName: "Cretrix",
+    location: "Yerevan,Armenia",
+    aboutCompany:
+      "Cretrix offers Software Architecture and Web/Mobile Application development services to increase your business and to make your projects successful.",
+    responsibilities: [
+      "Integrated Stripe payment system into applications. Added and handled subscription plans and created products for users.",
+      "Added Intercom into web applications .Created new Intercom events for stats    and higher admin control also for user convenience for familiarizing features of    applications.",
+      "Built more than 20 type of charts by D3.js and optimized performance.",
+    ],
     usedTechnologies: "Redux",
   },
   {
@@ -50,7 +67,7 @@ function WorkExperience() {
                 <p className="topic-desc">{job.aboutCompany}</p>
                 <ul className="topic-desc">
                   {job.responsibilities.map((el) => (
-                    <li>{el}</li>
+                    <ListItem desc={el}/>
                   ))}
                 </ul>
                 <p className="topic-desc">{job.usedTechnologies}</p>
