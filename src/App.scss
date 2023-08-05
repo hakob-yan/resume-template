@@ -23,7 +23,7 @@
   .section-seperated {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2.5rem;
+    column-gap: 1.5rem;
     row-gap: 2.5rem;
 
   }
@@ -42,16 +42,22 @@
   .topic__left-side {
     grid-column: span 1;
     justify-self: end;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
   }
   .topic__right-side {
     grid-column: span 2;
     justify-items: end;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
   }
   .topic-title {
     font-size: 1.08rem;
     font-weight: 700;
     color: $primary-color;
-    margin: 0.5rem 0;
   }
   .topic-desc {
     font-size: 1rem;

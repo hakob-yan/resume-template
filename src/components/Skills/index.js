@@ -1,7 +1,7 @@
 import React from "react";
 import ListItem from "../ListItem"
 import "./styles.scss";
-const basicScillsArr = [
+const basicScillsArr = []||[
   "HTML5",
   "CSS3",
   "JavaScript(ES6+)",
@@ -12,14 +12,14 @@ const basicScillsArr = [
   "Next.js",
   "Apollo GraphQL"
 ];
-const librariesArr = [
+const librariesArr = [] ||  [
   "Sass/SCSS",
   "Tailwind CSS",
   "Styled Components",
   "Material UI",
   "Bootstrap 5",
 ];
-const toolssArr = ["Ajax", "RESTful APIs", "OOP", "Git", "Docker", "Webpack", "Babel"];
+const toolssArr =[] || ["Ajax", "RESTful APIs", "OOP", "Git", "Docker", "Webpack", "Babel"];
 
 function Skills() {
   return (
