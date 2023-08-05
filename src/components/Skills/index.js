@@ -1,4 +1,5 @@
 import React from "react";
+import ListItem from "../ListItem"
 import "./styles.scss";
 const basicScillsArr = [
   "HTML5",
@@ -18,7 +19,7 @@ const librariesArr = [
   "Material UI",
   "Bootstrap 5",
 ];
-const toolssArr = ["Ajax","RESTful APIs", "OOP","Git","Docker","Webpack","Babel"];
+const toolssArr = ["Ajax", "RESTful APIs", "OOP", "Git", "Docker", "Webpack", "Babel"];
 
 function Skills() {
   return (
@@ -26,25 +27,25 @@ function Skills() {
       <p className="section-title">Skills</p>
       <div className="topic skills_section">
         <div className="first-part-skills">
-          <ul className="topic-desc">
+          <div className="topic-desc">
             {basicScillsArr.map((skill) => (
-              <li>{skill}</li>
+              <ListItem skill desc={skill} />
             ))}
-          </ul>
+          </div>
         </div>
         <div className="second-part-skills">
-          <ul className="topic-desc">
+          <div className="topic-desc">
             {librariesArr.map((skill) => (
-              <li>{skill}</li>
+              <ListItem skill desc={skill} />
             ))}
-          </ul>
+          </div>
         </div>
         <div className="third-part-skills">
-          <ul className="topic-desc">
+          <div className="topic-desc">
             {toolssArr.map((skill) => (
-              <li>{skill}</li>
+              <ListItem skill desc={skill} />
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>
