@@ -19,9 +19,9 @@ const jobsArr = [
       "Integrated Stripe payment system into applications. Added and handledsubscription plans and created products for users",
       "Added Intercom into web applications .Created new Intercom events for stats and higher admin control also for user convenience for familiarizing features of applications.",
       "Developed new Automation logic with Node.js and AWS services.",
-      "Tested endpoints with expect testing library."
+      "Tested endpoints with expect testing library.",
     ],
-    usedTechnologies: "Redux",
+    usedTechnologies: ["React","Redux","Tailwind CSS","D3.js","Node.js","MySQL","WebSockets","Docker","Amazon S3","Stripe","Intercom"],
   },
   {
     startDate: "Feb 2022",
@@ -36,10 +36,9 @@ const jobsArr = [
       "Built custom hooks for applications to avoid repetitive code snippets (followed D.R.Y principle)",
       "Migrated most of class components into functional ones to avoid props drilling and to have ability of using hooks.",
       "Wrote unit tests ,tested React Components by React Testing Library.",
-      "Created new reusable React components , handled and maintained."
-     
+      "Created new reusable React components , handled and maintained.",
     ],
-    usedTechnologies: "Redux",
+    usedTechnologies: ["TypeScript","React","Redux","GraphQL","Material UI","Styled Components","MobX","Bootstrap 5", "Node.js", "MongoDB"]
   },
   {
     startDate: "2020",
@@ -47,16 +46,15 @@ const jobsArr = [
     position: "Frontend Web Developer",
     companyName: "Freelancer",
     location: "Yerevan, Armenia",
-    aboutCompany:
-      "",
+    aboutCompany: "",
     responsibilities: [
       "Redux was inseparable part of my development.",
       "Built HTML layouts with its enhanced animation system to bring best view.",
       "Provided responsive design of Web Applications by creating web version of Application.",
       "Enhanced component styling by the help of Bootstrap.",
-      "Created new reusable components , which helped me to speed up our developing and maintaining."
+      "Created new reusable components , which helped me to speed up our developing and maintaining.",
     ],
-    usedTechnologies: "Redux",
+    usedTechnologies: ["TypeScript","React","Redux","GraphQL","Next.js","Styled Components"],
   },
 ];
 
@@ -75,14 +73,20 @@ function WorkExperience() {
                 <p className="topic-desc topic-title">{job.position}</p>
               </div>
               <div className="topic__right-side">
-                <p className="topic-title">{job.companyName +'\t'+ job.location}</p>
+                <p className="topic-title">
+                  {job.companyName + "\t" + job.location}
+                </p>
                 <p className="topic-desc">{job.aboutCompany}</p>
                 <ul className="topic-desc">
-                  {job.responsibilities.map((el,i) => (
+                  {job.responsibilities.map((el, i) => (
                     <ListItem key={i} desc={el} />
                   ))}
                 </ul>
-                <p className="topic-desc">{job.usedTechnologies}</p>
+                <p className="used-technologies">
+                  {job.usedTechnologies.map((tech,i) => {
+                    return <span key={tech}>{tech+",\t"}</span>;
+                  })}
+                </p>
               </div>
             </React.Fragment>
           );

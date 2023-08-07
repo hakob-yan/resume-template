@@ -1,5 +1,6 @@
 @import "variables";
 .app {
+
   @media print {
     width: 100%;
     height: 100vh;
@@ -25,7 +26,6 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.5rem;
     row-gap: 2.5rem;
-
   }
   .section {
     // padding: 2rem;
@@ -52,7 +52,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 0.5rem;
-
   }
   .topic-title {
     font-size: 1.08rem;
@@ -63,9 +62,8 @@
     font-size: 1rem;
     color: $secondary-color;
   }
-  .topic-title{
+  .topic-title {
     font-weight: 600;
-
   }
   .left-layout {
     grid-column: span 8;
