@@ -7,7 +7,7 @@ const jobsArr = [
     endDate: "Jul 2023",
     specialization: "Telecommunications and Engineering",
     universityName: "National University of Armenia",
-    location: "Yerevan, Armenia",
+    location: "",
     responsibilities: [
       "Explored analytic mathematics and physics in deeper manner also some programming languages .",
       "Investigated and acquired facility of transmitting signals on hardware and software levels.",
@@ -21,9 +21,9 @@ function Education() {
     <div className="Education section">
       <p className="section-title">Education</p>
       <div className="topic section-seperated ">
-        {jobsArr.map((job) => {
+        {jobsArr.map((job,i) => {
           return (
-            <>
+            <React.Fragment key={i}>
               <div className="topic__left-side">
                 <p className="topic-title">
                   {job.startDate + "-" + job.endDate}
@@ -35,12 +35,12 @@ function Education() {
                   {job.universityName + job.location}
                 </p>
                 <ul className="topic-desc">
-                  {job.responsibilities.map((el) => (
-                    <li>{el}</li>
+                  {job.responsibilities.map((el,i) => (
+                    <li key={i}>{el}</li>
                   ))}
                 </ul>
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>

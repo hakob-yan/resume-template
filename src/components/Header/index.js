@@ -26,7 +26,7 @@ const Contacts = () => {
     <div className="contacts">
       {contactsArr.map((el) => {
         return (
-          <div className="contact">
+          <div key={el.link} className="contact">
             <img src={el.src} alt="logo" className="logo" />
             <a
               className="social-media-name"

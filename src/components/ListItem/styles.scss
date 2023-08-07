@@ -2,13 +2,5 @@
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 0.7rem;
-  .list-text{
-    box-sizing: content-box;
-    background-color: rgb(0, 0, 0);
-    font-size: 1.3rem;
-    padding: 0.1rem;
-    color: white;
-    margin: 0.2rem 0;
-    font-weight: 600;
-  }
+
 }

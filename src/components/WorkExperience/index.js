@@ -44,15 +44,17 @@ const jobsArr = [
   {
     startDate: "2020",
     endDate: "Mar 2022",
-    position: "Front Web End Developer",
+    position: "Frontend Web Developer",
     companyName: "Freelancer",
     location: "Yerevan, Armenia",
     aboutCompany:
       "",
     responsibilities: [
-      "Integrated Stripe payment system into applications. Added and handled subscription plans and created products for users.",
-      "Added Intercom into web applications .Created new Intercom events for stats    and higher admin control also for user convenience for familiarizing features of    applications.",
-      "Built more than 20 type of charts by D3.js and optimized performance.",
+      "Redux was inseparable part of my development.",
+      "Built HTML layouts with its enhanced animation system to bring best view.",
+      "Provided responsive design of Web Applications by creating web version of Application.",
+      "Enhanced component styling by the help of Bootstrap.",
+      "Created new reusable components , which helped me to speed up our developing and maintaining."
     ],
     usedTechnologies: "Redux",
   },
@@ -65,7 +67,7 @@ function WorkExperience() {
       <div className="topic section-seperated ">
         {jobsArr.map((job) => {
           return (
-            <>
+            <React.Fragment key={job.companyName}>
               <div className="topic__left-side">
                 <p className="topic-title">
                   {job.startDate + " - " + job.endDate}
@@ -76,13 +78,13 @@ function WorkExperience() {
                 <p className="topic-title">{job.companyName +'\t'+ job.location}</p>
                 <p className="topic-desc">{job.aboutCompany}</p>
                 <ul className="topic-desc">
-                  {job.responsibilities.map((el) => (
-                    <ListItem desc={el} />
+                  {job.responsibilities.map((el,i) => (
+                    <ListItem key={i} desc={el} />
                   ))}
                 </ul>
                 <p className="topic-desc">{job.usedTechnologies}</p>
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>

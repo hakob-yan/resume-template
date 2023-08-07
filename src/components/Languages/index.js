@@ -21,7 +21,7 @@ const LngLevel = ({ level }) => {
   return (
     <div className="lang-level">
       {[0, 0, 0, 0, 0].map((el, i) => {
-        return <div className={`level ${i<level  ? "active" : ""}`}></div>;
+        return <div className={`level ${i<level  ? "active" : ""}`} key={i}></div>;
       })}
     </div>
   );
@@ -42,8 +42,8 @@ function Languages() {
     <div className="Languages section">
       <p className="section-title">Languages</p>
       <div className="topic language-secion">
-        {languagesArr.map((lang) => {
-          return <LangElem lang={lang} />;
+        {languagesArr.map((lang,i) => {
+          return <LangElem key={i} lang={lang} />;
         })}
       </div>
     </div>

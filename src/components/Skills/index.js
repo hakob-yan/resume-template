@@ -1,25 +1,50 @@
 import React from "react";
-import ListItem from "../ListItem"
 import "./styles.scss";
-const basicScillsArr = []||[
+const basicScillsArr = [
   "HTML5",
   "CSS3",
   "JavaScript(ES6+)",
   "TypeScript",
-  "React",
+  "React(hooks)",
   "Redux(Thunk)",
-  "MobX",
   "Next.js",
-  "Apollo GraphQL"
+  "MobX",
+  "RESTful APIs",
+  "GraphQL",
+  "D3.js",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
+  "Redis",
+  "Template Engines",
+  "WebSockets/Socket.IO/WS.js",
+  "MySQL",
+  "Sequelize",
+  "jQuery",
+  "Stripe",
+  "Intercom",
+  "Docker",
+  "Amazon S3"
+  
 ];
-const librariesArr = [] ||  [
+const librariesArr = [
   "Sass/SCSS",
   "Tailwind CSS",
   "Styled Components",
   "Material UI",
   "Bootstrap 5",
 ];
-const toolssArr =[] || ["Ajax", "RESTful APIs", "OOP", "Git", "Docker", "Webpack", "Babel"];
+const toolssArr = [
+  // "Ajax",
+  // "OOP",
+  // "Git",
+  // "Docker",
+  // "Webpack",
+  // "Babel",
+];
+
+const allSkills=[...basicScillsArr,...librariesArr,...toolssArr];
 
 function Skills() {
   return (
@@ -27,26 +52,20 @@ function Skills() {
       <p className="section-title">Skills</p>
       <div className="topic skills_section">
         <div className="first-part-skills">
-          <div className="topic-desc">
-            {basicScillsArr.map((skill) => (
-              <ListItem skill desc={skill} />
-            ))}
-          </div>
+          {allSkills.map((skill) => (
+            <p key={skill} className="skill-item"> {skill}</p>
+          ))}
         </div>
-        <div className="second-part-skills">
-          <div className="topic-desc">
-            {librariesArr.map((skill) => (
-              <ListItem skill desc={skill} />
-            ))}
-          </div>
+        {/* <div className="second-part-skills">
+          {librariesArr.map((skill) => (
+            <p className="skill-item"> {skill}</p>
+          ))}
         </div>
         <div className="third-part-skills">
-          <div className="topic-desc">
-            {toolssArr.map((skill) => (
-              <ListItem skill desc={skill} />
-            ))}
-          </div>
-        </div>
+          {toolssArr.map((skill) => (
+            <p className="skill-item"> {skill}</p>
+          ))}
+        </div> */}
       </div>
     </div>
   );
