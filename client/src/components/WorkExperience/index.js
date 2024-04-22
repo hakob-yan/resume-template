@@ -4,24 +4,58 @@ import ListItem from "../ListItem";
 
 const jobsArr = [
   {
-    startDate: "Aug 2022",
+    startDate: "Aug 2023",
     endDate: "Present",
+    position: "React Developer (NextJS)",
+    companyName: "Swaps.app",
+    location: "Estonia, Remote",
+    aboutCompany:
+      "Swaps.app is a cryptocurrency payment gateway for personal and business.",
+    responsibilities: [
+      "Designed architecture  and developed whole application from the scratch based on NextJS",
+      "Optimized and enhanced SEO by following bunch of  Google rules.",
+      "Translated whole application by adding 7 different languages.",
+      "Added capability to use application both light and dark mode.",
+    ],
+    usedTechnologies: [
+      "NextJS",
+      "TypeScript",
+      "React",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "WebSockets",
+    ],
+  },
+  {
+    startDate: "Aug 2022",
+    endDate: "Sep 2023",
     position: "Full-Stack Developer",
     companyName: "Cretrix LLC",
     location: "Yerevan, Armenia",
     aboutCompany:
-      "Cretrix has been doing web development, promotion and web support since 2009.Cretrix offers Software Architecture and Web/Mobile Application development services.",
+      "Cretrix has been doing web development, promotion and web support since 2009.",
     responsibilities: [
       "Built 2FA authentication to improve user's security level.",
-      "Created and handled as private RESTful APIs as public.",
       "Created more than 20 type of charts for data visualization by D3.js.",
       "Improved chart downloading by configuring Puppeteer.",
-      "Integrated Stripe payment system into applications. Added and handledsubscription plans and created products for users",
-      "Added Intercom into web applications .Created new Intercom events for stats and higher admin control also for user convenience for familiarizing features of applications.",
+      "Integrated Stripe payment system into applications.",
+      "Added Intercom into web applications .Created new Intercom events for stats and higher admin control.",
       "Developed new Automation logic with Node.js and AWS services.",
       "Tested endpoints with expect testing library.",
     ],
-    usedTechnologies: ["React","Redux","Tailwind CSS","D3.js","Node.js","MySQL","WebSockets","Docker","Amazon S3","Stripe","Intercom"],
+    usedTechnologies: [
+      "React",
+      "Redux",
+      "Tailwind CSS",
+      "D3.js",
+      "Node.js",
+      "MySQL",
+      "WebSockets",
+      "Docker",
+      "Amazon S3",
+      "Stripe",
+      "Intercom",
+    ],
   },
   {
     startDate: "Feb 2022",
@@ -38,7 +72,18 @@ const jobsArr = [
       "Wrote unit tests ,tested React Components by React Testing Library.",
       "Created new reusable React components , handled and maintained.",
     ],
-    usedTechnologies: ["TypeScript","React","Redux","GraphQL","Material UI","Styled Components","MobX","Bootstrap 5", "Node.js", "MongoDB"]
+    usedTechnologies: [
+      "TypeScript",
+      "React",
+      "Redux",
+      "GraphQL",
+      "Material UI",
+      "Styled Components",
+      "MobX",
+      "Bootstrap 5",
+      "Node.js",
+      "MongoDB",
+    ],
   },
   {
     startDate: "2020",
@@ -48,13 +93,19 @@ const jobsArr = [
     location: "Yerevan, Armenia",
     aboutCompany: "",
     responsibilities: [
-      "Redux was inseparable part of my development.",
       "Built HTML layouts with its enhanced animation system to bring best view.",
-      "Provided responsive design of Web Applications by creating web version of Application.",
+      "Provided responsive design of Web Applications.",
       "Enhanced component styling by the help of Bootstrap.",
-      "Created new reusable components , which helped me to speed up our developing and maintaining.",
+      "Created new reusable components.",
     ],
-    usedTechnologies: ["TypeScript","React","Redux","GraphQL","Next.js","Styled Components"],
+    usedTechnologies: [
+      "TypeScript",
+      "React",
+      "Redux",
+      "GraphQL",
+      "Next.js",
+      "Styled Components",
+    ],
   },
 ];
 
@@ -83,8 +134,8 @@ function WorkExperience() {
                   ))}
                 </ul>
                 <p className="used-technologies">
-                  {job.usedTechnologies.map((tech,i) => {
-                    return <span key={tech}>{tech+",\t"}</span>;
+                  {job.usedTechnologies.map((tech, i) => {
+                    return <span key={tech}>{tech + ",\t"}</span>;
                   })}
                 </p>
               </div>
