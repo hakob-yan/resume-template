@@ -70,10 +70,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 0rem 1rem;
+
   }
   .right-layout {
-    padding: 2rem;
+    padding: 0rem 1rem;
     grid-column: span 5;
     display: flex;
     flex-direction: column;

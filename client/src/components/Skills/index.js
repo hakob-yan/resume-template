@@ -20,6 +20,7 @@ const basicScillsArr = [
   "Template Engines",
   "WebSockets/Socket.IO/WS.js",
   "MySQL",
+  "PostgreSQL",
   "Sequelize",
   "jQuery",
   "Stripe",
