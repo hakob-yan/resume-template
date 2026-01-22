@@ -1,51 +1,44 @@
-import React from "react";
 import "./styles.scss";
-const basicScillsArr = [
+const basicSkillsArr = [
   "HTML5",
   "CSS3",
-  "JavaScript(ES6+)",
+  "JavaScript (ES6+)",
   "TypeScript",
-  "React(hooks)",
-  "Redux(Thunk)",
+
+  "React (Hooks)",
+  "Redux Toolkit (RTK Query)",
+
   "Next.js",
-  "MobX",
-  "RESTful APIs",
+
+  "REST APIs",
   "GraphQL",
-  "D3.js",
+
   "Node.js",
   "Express.js",
+
   "MongoDB",
-  "Mongoose",
-  "Redis",
-  "Template Engines",
-  "WebSockets/Socket.IO/WS.js",
-  "MySQL",
   "PostgreSQL",
+  "MySQL",
+  "Redis",
+  "Mongoose",
   "Sequelize",
-  "jQuery",
-  "Stripe",
-  "Intercom",
+  "Prisma",
+
+  "WebSockets (Socket.IO)",
+
   "Docker",
-  "Amazon S3"
-  
-];
-const librariesArr = [
-  "Sass/SCSS",
-  "Tailwind CSS",
-  "Styled Components",
-  "Material UI",
-  "Bootstrap 5",
-];
-const toolssArr = [
-  // "Ajax",
-  // "OOP",
-  // "Git",
-  // "Docker",
-  // "Webpack",
-  // "Babel",
+  "Amazon S3",
 ];
 
-const allSkills=[...basicScillsArr,...librariesArr,...toolssArr];
+const librariesArr = [
+  "Sass / SCSS",
+  "Tailwind CSS",
+  "Material UI",
+  "Styled Components",
+];
+
+
+const allSkills = [...basicSkillsArr, ...librariesArr];
 
 function Skills() {
   return (
@@ -54,19 +47,12 @@ function Skills() {
       <div className="topic skills_section">
         <div className="first-part-skills">
           {allSkills.map((skill) => (
-            <p key={skill} className="skill-item"> {skill}</p>
+            <p key={skill} className="skill-item">
+              {" "}
+              {skill}
+            </p>
           ))}
         </div>
-        {/* <div className="second-part-skills">
-          {librariesArr.map((skill) => (
-            <p className="skill-item"> {skill}</p>
-          ))}
-        </div>
-        <div className="third-part-skills">
-          {toolssArr.map((skill) => (
-            <p className="skill-item"> {skill}</p>
-          ))}
-        </div> */}
       </div>
     </div>
   );

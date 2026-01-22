@@ -7,7 +7,7 @@ function Profile() {
       <p className="section-title">Profile</p>
       <div className="topic">
         <p className="summary">
-          Senior Frontend Developer specialized in React (Next.js) and
+          Senior Frontend Engineer specialized in React (Next.js) and
           TypeScript, with a solid background in building scalable and
           performant web applications. Skilled in Next.js and TailwindCSS to
           create modern, responsive interfaces. Experienced with backend
@@ -15,18 +15,18 @@ function Profile() {
           comprehensive understanding of full-stack architecture.
           <br /> •{" "}
           <a
-            href="https://dashboard.w3are.com/sign-in"
+            href="https://www.w3are.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            W3are Dashboard
+            W3are
           </a>{" "}
           — a financial management platform that allows users to create
           invoices, generate payment links, and accept payments in
           cryptocurrency.
           <br />•{" "}
           <a
-            href="https://crypto.swaps.app/en/payment-links"
+            href="https://www.swaps.app"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -50,6 +50,15 @@ function Profile() {
           </a>{" "}
           — data visualization platform designed for academic publishers to
           monitor and analyze journal performance.
+          <br />•{" "}
+          <a
+            href={window.location.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Active Flow One (AFO)
+          </a>{" "}
+          — Unity-based 3D application which helps people to work out at home using gamefication techniques.(None-commercial project, trying to implement my own ideas).
         </p>
       </div>
     </div>

@@ -37,7 +37,12 @@ const Contacts = () => {
         return (
           <div key={el.link} className="contact">
             <img src={el.src} alt="logo" className="logo" />
-            <a className="social-media-name" href={el.link} target="_blank">
+            <a
+              className="social-media-name"
+              href={el.link}
+              target="_blank"
+              rel="noreferrer"
+            >
               {el.value}
             </a>
           </div>
@@ -52,7 +57,7 @@ function Header() {
     <div className="Header">
       <div className="persoal-info">
         <h1 className="full-name">Hakob Hakobyan</h1>
-        <h2 className="profession">Senior Frontend Developer</h2>
+        <h2 className="profession">Senior Frontend Engineer</h2>
       </div>
       <Contacts />
     </div>

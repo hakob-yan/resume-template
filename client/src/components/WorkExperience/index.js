@@ -6,7 +6,7 @@ const jobsArr = [
   {
     startDate: "Aug 2023",
     endDate: "Present",
-    position: "Senior Frontend Developer",
+    position: "Senior Frontend Engineer",
     companyName: "Swaps.app",
     location: "Estonia, Remote",
     aboutCompany:
@@ -31,7 +31,7 @@ const jobsArr = [
   {
     startDate: "Jan 2024",
     endDate: "Dec 2025",
-    position: "Full-Stack Developer",
+    position: "Full-Stack Engineer",
     companyName: "BigBI Analytics",
     location: "Israel, Remote (Contract)",
     aboutCompany:
@@ -123,10 +123,10 @@ function WorkExperience() {
           return (
             <React.Fragment key={job.companyName}>
               <div className="topic__left-side">
-                <p className="topic-title">
+                <p className="topic-desc topic-title">
                   {job.startDate + " - " + job.endDate}
                 </p>
-                <p className="topic-desc topic-title">{job.position}</p>
+                <p className="topic-title">{job.position}</p>
               </div>
               <div className="topic__right-side">
                 <p className="topic-title">
