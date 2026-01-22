@@ -7,12 +7,12 @@ function Profile() {
       <p className="section-title">Profile</p>
       <div className="topic">
         <p className="summary">
-          Senior Frontend Engineer specialized in React (Next.js) and
-          TypeScript, with a solid background in building scalable and
-          performant web applications. Skilled in Next.js and TailwindCSS to
-          create modern, responsive interfaces. Experienced with backend
-          technologies including Node.js and Express.js, providing a
-          comprehensive understanding of full-stack architecture.
+          Senior Frontend Engineer with deep experience in React, Next.js, and
+          TypeScript. Proven track record of delivering scalable,
+          high-performance web applications with a strong focus on SEO,
+          internationalization, and modern UI architecture. Solid full-stack
+          experience supported by Node.js and cloud technologies.
+          <br />
           <br /> •{" "}
           <a
             href="https://www.w3are.com"
@@ -58,7 +58,9 @@ function Profile() {
           >
             Active Flow One (AFO)
           </a>{" "}
-          — Unity-based 3D application which helps people to work out at home using gamefication techniques.(None-commercial project, trying to implement my own ideas).
+          — Unity-based 3D application which helps people to work out at home
+          using gamification techniques. (Non-commercial project, trying to
+          implement my own ideas).
         </p>
       </div>
     </div>

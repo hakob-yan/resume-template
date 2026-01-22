@@ -13,18 +13,18 @@ const jobsArr = [
       "Swaps.app is a cryptocurrency payment gateway for individuals and businesses.",
     responsibilities: [
       "Designed the architecture and developed the entire application from scratch using Next.js.",
-      "Optimized and improved SEO by following Google best practices.",
+      "Improved SEO by following Google best practices.",
       "Implemented internationalization by adding support for 7 languages.",
       "Added support for both light and dark modes.",
       "Conducted unit and integration tests leveraging Jest and React Testing Library (RTL).",
     ],
     usedTechnologies: [
-      "NextJS",
+      "Next.js",
       "TypeScript",
       "React",
       "Redux Toolkit",
       "Tailwind CSS",
-      "WebSockets",
+      "WebSockets (Socket.IO)",
       "Jest + React Testing Library (RTL)"
     ],
   },
@@ -45,7 +45,7 @@ const jobsArr = [
     usedTechnologies: [
       "Node.js",
       "PostgreSQL",
-      "NextJS",
+      "Next.js",
       "TypeScript",
       "React",
       "Redux Toolkit",
@@ -77,7 +77,7 @@ const jobsArr = [
       "D3.js",
       "Node.js",
       "MySQL",
-      "WebSockets",
+      "WebSockets (Socket.IO)",
       "Docker",
       "Amazon S3",
       "Stripe",
@@ -93,9 +93,9 @@ const jobsArr = [
     aboutCompany:
       "NWSLab has been operating since 2015 and has delivered numerous projects across various domains.",
     responsibilities: [
-      "Worked with MongoDB using Mongoose and MySQL using Sequelize.",
+      "Worked with MongoDB (Mongoose) and MySQL (Sequelize).",
       "Built custom React hooks to eliminate repetitive code by following the DRY principle.",
-      "Migrated class components to functional components to leverage React hooks and reduce prop drilling.",
+      "Migrated class components to functional components to leverage React hooks and reduce prop drilling issues",
       "Wrote unit tests and tested React components using React Testing Library.",
       "Created, maintained, and managed reusable React components.",
     ],

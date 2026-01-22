@@ -26,7 +26,7 @@ function Education() {
             <React.Fragment key={i}>
               <div className="topic__left-side">
                 <p className="topic-title">
-                  {job.startDate + "-" + job.endDate}
+                  {job.startDate + " " + job.endDate}
                 </p>
                 <p className="topic-desc topic-title">{job.specialization}</p>
               </div>
