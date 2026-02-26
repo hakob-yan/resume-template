@@ -1,26 +1,21 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require("puppeteer");
 
 (async () => {
-  try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
 
-    // Adjust the page size (optional)
-    await page.setViewport({ width: 1200, height:800 });
+  await page.goto("http://localhost:5173", { waitUntil: "networkidle0" });
 
-    // Navigate to the HTML page you want to save as a PDF
-    await page.goto('http://localhost:5173', { waitUntil: 'networkidle0' });
+  await page.emulateMediaType("print");
+  await page.waitForSelector("#resume-wrapper");
 
-    // Wait for a short period of time to ensure all dynamic content is loaded (optional)
-    await page.waitForTimeout(2000);
+  const height = await page.$eval("#resume-wrapper", (el) => el.scrollHeight);
+  console.log("Height:", height);
+  await page.pdf({
+    path: "resume.pdf",
+    format: "A4",
+    printBackground: true,
+  });
 
-    // Generate the PDF and save it to a file
-    await page.pdf({ path: 'output.pdf', format: 'A4', printBackground: false  });
-
-    console.log('PDF saved successfully.');
-
-    await browser.close();
-  } catch (err) {
-    console.error('Error:', err);
-  }
+  await browser.close();
 })();
