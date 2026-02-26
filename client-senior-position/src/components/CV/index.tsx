@@ -2,7 +2,7 @@ import React from "react";
 
 const CV: React.FC = () => {
   return (
-    <div className="text-gray-900 py-12 px-6 w-full h-full">
+    <div className="text-gray-900  px-6">
       <div className="w-full  p-10 space-y-10">
         {/* HEADER */}
         <header className="space-y-3">
