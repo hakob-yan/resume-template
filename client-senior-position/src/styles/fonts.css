@@ -1,0 +1,63 @@
+/* Regular */
+@font-face {
+  font-family: "Calibri";
+  src: url("../assets/fonts/Calibri/calibri.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Calibri";
+  src: url("../assets/fonts/Calibri/calibrib.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Calibri";
+  src: url("../assets/fonts/Calibri/calibrii.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "Calibri";
+  src: url("../assets/fonts/Calibri/calibriz.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial/arial.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial/arialbd.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial/ariali.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: "Arial";
+  src: url("../assets/fonts/Arial/arialbi.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
