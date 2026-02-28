@@ -1,16 +1,23 @@
 @import "tailwindcss";
+
 @page {
   size: A4;
   margin: 0;
 }
 
-@media print {
-
-
-
-
- 
-}
 :root {
-  font-size: 12px;
+  font-size: 12pt; /* 1rem = 12pt */
+}
+
+body {
+  font-family:
+    "Calibri", "Arial", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media print {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
 }
