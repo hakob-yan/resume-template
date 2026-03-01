@@ -91,17 +91,24 @@ const CV: React.FC = () => {
         <section>
           <h2 className="text-xl font-bold text-gray-800">Technical Skills</h2>
           <p className="text-gray-700">
-            Frontend — React, Next.js, TypeScript, Redux Toolkit, MobX, Tailwind
-            CSS, D3.js, Jest, React Testing Library;
+            <strong>Frontend:</strong> JavaScript (ES6+), TypeScript, React,
+            Next.js, Redux Toolkit, MobX, GraphQL, Tailwind CSS, Material-UI,
+            Styled Components, D3.js, Micro Frontends
             <br />
-            Backend — Node.js, Express, REST APIs, WebSockets, JSON Schema
-            validation, Python scripting;
+            <strong>Backend:</strong> Node.js, Express, REST APIs, WebSockets,
+            RabbitMQ, Microservices, Event-Driven Architecture, Serverless (AWS
+            Lambda), Python, Authentication & Authorization (JWT, 2FA),
+            Performance Optimization, Security (OWASP), Load Balancing,
+            Horizontal Scaling, Design Patterns, SOLID Principles
             <br />
-            Databases — PostgreSQL, MongoDB, MySQL, Redis;
+            <strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Redis,
+            Indexing, Query Optimization, Caching, Data Validation
             <br />
-            DevOps & Tools — Docker, AWS (Lambda, S3), CI/CD (Jenkins), Git,
-            Containerization, Testing & Monitoring;
+            <strong>Testing:</strong> Jest, React Testing Library, Cypress,
+            Playwright, Test Coverage & Quality Standards
             <br />
+            <strong>DevOps & Tools:</strong> Docker, AWS (Lambda, S3), CI/CD,
+            Git, Containerization, Monitoring & Deployment Automation
           </p>
         </section>
 
