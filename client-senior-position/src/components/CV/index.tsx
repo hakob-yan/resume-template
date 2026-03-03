@@ -1,22 +1,18 @@
 import React from "react";
-import { jobs, type Job } from "./data";
+import { cvText } from "./data";
+import type { IJob } from "./types";
 
-// Refactored JobItem
-const JobItem: React.FC<{ job: Job }> = ({ job }) => (
+const JobItem: React.FC<{ job: IJob }> = ({ job }) => (
   <div>
     <div className="flex justify-between items-center">
-      {/* Job title and company */}
       <h3 className="text-base font-semibold">
         {job.title} <span className="font-bold">— {job.company}</span>
       </h3>
-
-      {/* Period and location */}
       <span className="text-sm font-bold">
         {job.period}
         {job.location ? ` · ${job.location}` : ""}
       </span>
     </div>
-
     <ul className="list-disc pl-5 space-y-0.5 text-gray-700">
       {job.responsibilities.map((item, idx) => (
         <li key={idx}>{item}</li>
@@ -24,109 +20,103 @@ const JobItem: React.FC<{ job: Job }> = ({ job }) => (
     </ul>
   </div>
 );
-// Main CV component
+
+// --- Main CV component ---
 const CV: React.FC = () => {
   return (
     <div className="text-gray-900 px-4 text-sm leading-snug">
       <div className="w-full p-5 space-y-1">
         {/* HEADER */}
         <header>
-          <h1 className="text-3xl font-bold tracking-tight">Hakob Hakobyan</h1>
+          <h1 className="text-3xl font-bold tracking-tight">
+            {cvText.header.name}
+          </h1>
           <p className="text-lg font-semibold text-gray-700">
-            Senior Full Stack Engineer (React · Node.js · Cloud)
+            {cvText.header.title}
           </p>
           <div className="flex flex-wrap gap-x-1.5 gap-y-1 text-xs text-gray-600 items-center">
-            <span>Yerevan, Armenia</span>
+            <span>{cvText.header.location}</span>
             <span>•</span>
-            <a href="tel:+37493102122" className="hover:underline">
-              +374 93 102 122
-            </a>
-            <span>•</span>
-            <a href="mailto:devhakob@gmail.com" className="hover:underline">
-              devhakob@gmail.com
+            <a href={`tel:${cvText.header.phone}`} className="hover:underline">
+              {cvText.header.phone}
             </a>
             <span>•</span>
             <a
-              href="https://www.linkedin.com/in/hakob-yan"
+              href={`mailto:${cvText.header.email}`}
+              className="hover:underline"
+            >
+              {cvText.header.email}
+            </a>
+            <span>•</span>
+            <a
+              href={`https://${cvText.header.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              linkedin.com/in/hakob-yan
+              {cvText.header.linkedin}
             </a>
             <span>•</span>
             <a
-              href="https://github.com/hakob-yan"
+              href={`https://${cvText.header.github}`}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              github.com/hakob-yan
+              {cvText.header.github}
             </a>
           </div>
         </header>
 
         {/* SUMMARY */}
         <section>
-          <h2 className="text-xl font-bold">Summary</h2>
-          <p className="text-gray-700 leading-snug">
-            Senior Engineer with 5+ years building high-throughput web apps
-            using TypeScript, React (Next.js), and Node.js. Experienced in
-            leading teams to deliver crypto payment gateways and real-time data
-            platforms. Skilled in migrating monoliths to scalable cloud systems.
-            Focused on high engineering standards, mentoring, and clean,
-            maintainable code that balances technical debt with business needs.
-          </p>
+          <h2 className="text-xl font-bold">{cvText.summary.heading}</h2>
+          <p className="text-gray-700 leading-snug">{cvText.summary.content}</p>
         </section>
 
         {/* EXPERIENCE */}
         <section>
-          <h2 className="text-xl font-bold">Professional Experience</h2>
-          {jobs.map((job, idx) => (
+          <h2 className="text-xl font-bold">{cvText.experience.heading}</h2>
+          {cvText.jobs.map((job, idx) => (
             <JobItem key={idx} job={job} />
           ))}
         </section>
 
         {/* SKILLS */}
         <section>
-          <h2 className="text-xl font-bold text-gray-800">Technical Skills</h2>
+          <h2 className="text-xl font-bold text-gray-800">
+            {cvText.skills.heading}
+          </h2>
           <p className="text-gray-700">
-            <strong>Frontend:</strong> JavaScript (ES6+), TypeScript, React,
-            Next.js, Redux Toolkit, MobX, GraphQL, Tailwind CSS, Material-UI,
-            Styled Components, D3.js, Micro Frontends
-            <br />
-            <strong>Backend:</strong> Node.js, Express, REST APIs, WebSockets,
-            RabbitMQ, Microservices, Event-Driven Architecture, Serverless (AWS
-            Lambda), Python, Authentication & Authorization (JWT, 2FA),
-            Performance Optimization, Security (OWASP), Load Balancing,
-            Horizontal Scaling, Design Patterns, SOLID Principles
-            <br />
-            <strong>Databases:</strong> PostgreSQL, MongoDB, MySQL, Redis,
-            Indexing, Query Optimization, Caching, Data Validation
-            <br />
-            <strong>Testing:</strong> Jest, React Testing Library, Cypress,
-            Playwright, Test Coverage & Quality Standards
-            <br />
-            <strong>DevOps & Tools:</strong> Docker, AWS (Lambda, S3), CI/CD,
-            Git, Containerization, Monitoring & Deployment Automation
+            <strong>Frontend:</strong> {cvText.skills.frontend} <br />
+            <strong>Backend:</strong> {cvText.skills.backend} <br />
+            <strong>Databases:</strong> {cvText.skills.databases} <br />
+            <strong>Testing:</strong> {cvText.skills.testing} <br />
+            <strong>DevOps & Tools:</strong> {cvText.skills.devops}
           </p>
         </section>
 
         {/* EDUCATION */}
         <section>
-          <h2 className="text-xl font-bold">Education</h2>
-          <p className="text-gray-700">
-            National University of Armenia — Telecommunications and Engineering
-            (2017 – 2023)
-          </p>
+          <h2 className="text-xl font-bold">{cvText.education.heading}</h2>
+          <p className="text-gray-700">{cvText.education.content}</p>
         </section>
+
+        {/* LANGUAGES */}
         <section>
-          <h2 className="text-xl font-semibold text-gray-800">Languages</h2>
+          <h2 className="text-xl font-semibold text-gray-800">
+            {cvText.languages.heading}
+          </h2>
           <p className="flex">
-            <span className="font-medium">English:&#160;</span> C1 (Proficient),
-            <span className="font-medium ml-2">Russian:&#160;</span> C1
-            (Proficient),
-            <span className="font-medium ml-2">Armenian:&#160;</span> Native
+            {cvText.languages.content.map((lang, idx) => (
+              <span
+                key={idx}
+                className={`font-medium${idx > 0 ? " ml-2" : ""}`}
+              >
+                {lang.lang}:&#160;{lang.level}
+                {idx < cvText.languages.content.length - 1 ? "," : ""}
+              </span>
+            ))}
           </p>
         </section>
       </div>
