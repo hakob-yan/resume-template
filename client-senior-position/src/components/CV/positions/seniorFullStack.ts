@@ -1,5 +1,4 @@
-
-export const cvText = {
+export const data = {
   header: {
     name: "Hakob Hakobyan",
     title: "Senior Full Stack Engineer (React · Node.js · Cloud)",

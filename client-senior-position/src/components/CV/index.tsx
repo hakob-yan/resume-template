@@ -1,6 +1,6 @@
 import React from "react";
-import { cvText } from "./data";
 import type { IJob } from "./types";
+import { cvText } from "./positions";
 
 const JobItem: React.FC<{ job: IJob }> = ({ job }) => (
   <div>
