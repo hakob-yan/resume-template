@@ -1,33 +1,51 @@
 import React from "react";
-import type { IJob } from "./types";
-import { cvText } from "./positions";
+import type { IJob, Role } from "./types";
+import { cvText } from "./positions/seniorFrontEnd";
+// --- Job Item Component ---
+const JobItem: React.FC<{ job: IJob; targetRole: Role }> = ({
+  job,
+  targetRole,
+}) => {
+  // Filter responsibilities based on the requested role
+  const filteredResponsibilities = job.responsibilities.filter(
+    (item) => targetRole === "all" || item.roles.includes(targetRole),
+  );
 
-const JobItem: React.FC<{ job: IJob }> = ({ job }) => (
-  <div>
-    <div className="flex justify-between items-center">
-      <h3 className="text-base font-semibold">
-        {job.title} <span className="font-bold">— {job.company}</span>
-      </h3>
-      <span className="text-sm font-bold">
-        {job.period}
-        {job.location ? ` · ${job.location}` : ""}
-      </span>
+  // Do not render the job block if all responsibilities are filtered out
+  if (filteredResponsibilities.length === 0) return null;
+
+  return (
+    <div className="mb-4">
+      <div className="flex justify-between items-center">
+        <h3 className="text-base font-semibold">
+          {job.title} <span className="font-bold">— {job.company}</span>
+        </h3>
+        <span className="text-sm font-bold">
+          {job.period}
+          {job.location ? ` · ${job.location}` : ""}
+        </span>
+      </div>
+      <ul className="list-disc pl-5 space-y-0.5 text-gray-700">
+        {filteredResponsibilities.map((item, idx) => (
+          <li key={idx}>{item.text}</li>
+        ))}
+      </ul>
     </div>
-    <ul className="list-disc pl-5 space-y-0.5 text-gray-700">
-      {job.responsibilities.map((item, idx) => (
-        <li key={idx}>{item}</li>
-      ))}
-    </ul>
-  </div>
-);
+  );
+};
 
-// --- Main CV component ---
-const CV: React.FC = () => {
+// --- Main CV Component ---
+const CV: React.FC<{ targetRole?: Role }> = ({ targetRole = "frontend" }) => {
+  // Filter skill categories based on the requested role
+  const filteredSkills = cvText.skills.categories.filter(
+    (skill) => targetRole === "all" || skill.roles.includes(targetRole),
+  );
+
   return (
     <div className="text-gray-900 px-4 text-sm leading-snug">
-      <div className="w-full p-5 space-y-1">
+      <div className="w-full p-5 space-y-4">
         {/* HEADER */}
-        <header>
+        <header className="space-y-1">
           <h1 className="text-3xl font-bold tracking-tight">
             {cvText.header.name}
           </h1>
@@ -70,41 +88,43 @@ const CV: React.FC = () => {
 
         {/* SUMMARY */}
         <section>
-          <h2 className="text-xl font-bold">{cvText.summary.heading}</h2>
+          <h2 className="text-xl font-bold mb-1">{cvText.summary.heading}</h2>
           <p className="text-gray-700 leading-snug">{cvText.summary.content}</p>
         </section>
 
         {/* EXPERIENCE */}
         <section>
-          <h2 className="text-xl font-bold">{cvText.experience.heading}</h2>
+          <h2 className="text-xl font-bold mb-2">
+            {cvText.experience.heading}
+          </h2>
           {cvText.jobs.map((job, idx) => (
-            <JobItem key={idx} job={job} />
+            <JobItem key={idx} job={job} targetRole={targetRole} />
           ))}
         </section>
 
         {/* SKILLS */}
         <section>
-          <h2 className="text-xl font-bold text-gray-800">
+          <h2 className="text-xl font-bold text-gray-800 mb-2">
             {cvText.skills.heading}
           </h2>
-          <p className="text-gray-700">
-            <strong>Frontend:</strong> {cvText.skills.frontend} <br />
-            <strong>Backend:</strong> {cvText.skills.backend} <br />
-            <strong>Databases:</strong> {cvText.skills.databases} <br />
-            <strong>Testing:</strong> {cvText.skills.testing} <br />
-            <strong>DevOps & Tools:</strong> {cvText.skills.devops}
+          <p className="text-gray-700 leading-relaxed">
+            {filteredSkills.map((skill, idx) => (
+              <React.Fragment key={idx}>
+                <strong>{skill.label}:</strong> {skill.items} <br />
+              </React.Fragment>
+            ))}
           </p>
         </section>
 
         {/* EDUCATION */}
         <section>
-          <h2 className="text-xl font-bold">{cvText.education.heading}</h2>
+          <h2 className="text-xl font-bold mb-1">{cvText.education.heading}</h2>
           <p className="text-gray-700">{cvText.education.content}</p>
         </section>
 
         {/* LANGUAGES */}
         <section>
-          <h2 className="text-xl font-semibold text-gray-800">
+          <h2 className="text-xl font-semibold text-gray-800 mb-1">
             {cvText.languages.heading}
           </h2>
           <p className="flex">
